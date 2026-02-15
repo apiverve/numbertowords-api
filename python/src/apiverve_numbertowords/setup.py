@@ -10,20 +10,14 @@ if os.path.exists(requirements_file):
 
 setup(
     name='apiverve_numbertowords',
-    version='1.1.12',
+    version='1.1.13',
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
     description='Number to Words is a simple tool for converting numbers to words. It returns the number in words.',
     author='APIVerve',
     author_email='hello@apiverve.com',
-    url='https://apiverve.com',
-    project_urls={
-        'Homepage': 'https://apiverve.com',
-        'Documentation': 'https://docs.apiverve.com/ref/numbertowords',
-        'Source': 'https://github.com/apiverve/numbertowords-api',
-        'Bug Tracker': 'https://github.com/apiverve/numbertowords-api/issues'
-    },
+    url='https://numbertowords.apiverve.com?utm_source=pypi&utm_medium=homepage',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
