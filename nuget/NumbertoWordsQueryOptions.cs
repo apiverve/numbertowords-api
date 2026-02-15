@@ -12,7 +12,6 @@ namespace APIVerve.API.NumbertoWords
     {
         /// <summary>
         /// The number to convert to words
-        /// Example: 975.07
         /// </summary>
         [JsonProperty("number")]
         public string Number { get; set; }
