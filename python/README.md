@@ -235,8 +235,9 @@ from apiverve_numbertowords.apiClient import NumbertowordsAPIClient
 
 api = NumbertowordsAPIClient("[YOUR_API_KEY]")
 
+query = { "number": 975.07 }
+
 try:
-    query = { "number": 975.07 }
     result = api.execute(query)
     print(result)
 finally:
