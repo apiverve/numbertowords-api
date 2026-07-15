@@ -4,30 +4,42 @@ declare module '@apiverve/numbertowords' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface numbertowordsResponse {
     status: string;
     error: string | null;
     data: NumbertoWordsData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface NumbertoWordsData {
-      number:                number;
-      words:                 string;
-      ordinal:               string;
-      numberOfDigitsNumeric: number;
-      numberOfDigitsWords:   string;
-      eachNumber:            string[];
+      number:                number | null;
+      words:                 null | string;
+      ordinal:               null | string;
+      numberOfDigitsNumeric: number | null;
+      numberOfDigitsWords:   null | string;
+      eachNumber:            (null | string)[];
       afterDecimal:          AfterDecimal;
-      locale:                string;
+      locale:                null | string;
   }
   
   interface AfterDecimal {
-      number:                string;
-      words:                 string[];
-      numberOfDigitsNumeric: number;
-      numberOfDigitsWords:   string;
+      number:                null | string;
+      words:                 (null | string)[];
+      numberOfDigitsNumeric: number | null;
+      numberOfDigitsWords:   null | string;
   }
 
   export default class numbertowordsWrapper {
