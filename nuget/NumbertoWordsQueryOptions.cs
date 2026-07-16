@@ -14,6 +14,6 @@ namespace APIVerve.API.NumbertoWords
         /// The number to convert to words
         /// </summary>
         [JsonProperty("number")]
-        public string Number { get; set; }
+        public double Number { get; set; }
     }
 }
