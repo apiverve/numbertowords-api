@@ -25,12 +25,15 @@ namespace APIVerve.API.NumbertoWords
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("number")]
-        public double Number { get; set; }
+        public double? Number { get; set; }
 
         [JsonProperty("words")]
         public string Words { get; set; }
@@ -39,7 +42,7 @@ namespace APIVerve.API.NumbertoWords
         public string Ordinal { get; set; }
 
         [JsonProperty("numberOfDigits_numeric")]
-        public long NumberOfDigitsNumeric { get; set; }
+        public long? NumberOfDigitsNumeric { get; set; }
 
         [JsonProperty("numberOfDigits_words")]
         public string NumberOfDigitsWords { get; set; }
@@ -63,9 +66,21 @@ namespace APIVerve.API.NumbertoWords
         public string[] Words { get; set; }
 
         [JsonProperty("numberOfDigits_numeric")]
-        public long NumberOfDigitsNumeric { get; set; }
+        public long? NumberOfDigitsNumeric { get; set; }
 
         [JsonProperty("numberOfDigits_words")]
         public string NumberOfDigitsWords { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
