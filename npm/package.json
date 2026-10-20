@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/numbertowords",
-  "version": "1.2.0",
-  "description": "Number to Words is a simple tool for converting numbers to words. It returns the number in words.",
+  "version": "1.2.2",
+  "description": "Number to Words is a number to words API that converts numeric values into written cardinal words and counts whole and fractional digits. Pass any integer or float to get the spelled-out text along with digit counts and locale information.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "number to words", "number conversion", "number to words api", "number conversion api", "number to words tool"
+    "number to words api", "number to words converter api", "convert number to words", "number to words", "digits to text"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/numbertowords-api/issues"
   },
-  "homepage": "https://numbertowords.apiverve.com?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/numbertowords?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
