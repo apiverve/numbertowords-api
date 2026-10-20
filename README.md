@@ -1,13 +1,13 @@
-# [Number to Words API](https://numbertowords.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Number to Words API](https://apiverve.com/marketplace/numbertowords?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Number to Words is a simple tool for converting numbers to words. It returns the number in words.
+Number to Words is a number to words API that converts numeric values into written cardinal words and counts whole and fractional digits. Pass any integer or float to get the spelled-out text along with digit counts and locale information.
 
 The Number to Words API provides a simple, reliable way to integrate number to words functionality into your applications. Built for developers who need production-ready number to words capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://numbertowords.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/numbertowords?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://numbertowords.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/numbertowords?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/numbertowords-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Number to Words API](https://numbertowords.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Number to Words API](https://apiverve.com/marketplace/numbertowords?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/numbertowords](https://docs.apiverve.com/ref/numbertowords)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -191,11 +191,47 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Number to Words API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "number": 975.07,
+    "words": "nine hundred seventy-five point zero seven",
+    "ordinal": "nine hundred seventy-fifth point zero seven",
+    "numberOfDigits_numeric": 3,
+    "numberOfDigits_words": "three",
+    "eachNumber": [
+      "nine",
+      "seven",
+      "five"
+    ],
+    "afterDecimal": {
+      "number": "07",
+      "words": [
+        "zero",
+        "seven"
+      ],
+      "numberOfDigits_numeric": 2,
+      "numberOfDigits_words": "two"
+    },
+    "locale": "en-US"
+  }
 }
 ```
 
@@ -203,7 +239,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Number to Words API](https://numbertowords.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Number to Words API](https://apiverve.com/marketplace/numbertowords?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
